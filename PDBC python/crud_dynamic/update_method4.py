@@ -7,13 +7,7 @@ def Insert4(data):
     company = data['company']
     salary = data['salary']
 
-    connection = pymysql.connect(
-        host='localhost',
-        port=3306,
-        user='root',
-        password='root',
-        database='company'
-    )
+    connection = pymysql.connect( host='localhost', port=3306, user='root', password='root', database='company' )
 
     cursor = connection.cursor()
 
@@ -28,11 +22,6 @@ def Insert4(data):
     print("Suiiiii.....")
 
 
-params = {
-    'id': 2,
-    'name': 'xyz',
-    'company': 'KFC',
-    'salary': 100
-}
+params = {'id': 2, 'name': 'xyz', 'company': 'KFC', 'salary': 100}
 
 Insert4(params)
